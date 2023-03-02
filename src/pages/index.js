@@ -1,14 +1,7 @@
 import Header from "@/component/Header.js";
-import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push(e.target.id);
-  };
-
   return (
     <>
       <Header title={"Web Rendering"} />
@@ -38,15 +31,24 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center content-center gap-5 my-8">
-          <button className="button" id={"/csr"} onClick={handleClick}>
+          <Link
+            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
+            href="/csr"
+          >
             CSR
-          </button>
-          <button className="button" id={"/ssg"} onClick={handleClick}>
+          </Link>
+          <Link
+            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
+            href="/ssg"
+          >
             SSG
-          </button>
-          <button className="button" id={"/ssr"} onClick={handleClick}>
+          </Link>
+          <Link
+            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
+            href="/ssr"
+          >
             SSR
-          </button>
+          </Link>
         </div>
       </div>
     </>
