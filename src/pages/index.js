@@ -1,5 +1,5 @@
 import Header from "@/component/Header.js";
-import Link from "next/link";
+import Button from "@/component/Button";
 
 export default function Home() {
   return (
@@ -31,24 +31,9 @@ export default function Home() {
         </div>
 
         <div className="flex flex-row justify-center content-center gap-5 my-8">
-          <Link
-            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
-            href="/csr"
-          >
-            CSR
-          </Link>
-          <Link
-            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
-            href="/ssg"
-          >
-            SSG
-          </Link>
-          <Link
-            className=" bg-white border border-gray-300 hover:bg-offwhite hover:text-dark text-medium py-1.5 px-3 rounded shadow"
-            href="/ssr"
-          >
-            SSR
-          </Link>
+          <Button href="/csr" label="CSR" />
+          <Button href="/ssg" label="SSG" />
+          <Button href="/ssr" label="SSR" />
         </div>
       </div>
     </>
